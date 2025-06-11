@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dive Site QR App</title>
+  <script src="https://cdn.jsdelivr.net/npm/qrious@4.0.2/dist/qrious.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.3.2/papaparse.min.js"></script>
+  <style>
+    body {
+      font-family: sans-serif;
+      max-width: 800px;
+      margin: auto;
+      padding: 2rem;
+    }
+    input, select, button {
+      padding: 10px;
+      margin-bottom: 10px;
+      width: 100%;
+      font-size: 16px;
+    }
+    .result {
+      border: 1px solid #ccc;
+      padding: 1rem;
+      margin-top: 20px;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Dive Site QR Code Finder</h2>
+
+<button onclick="adminLogin()">Login as Admin</button>
+
+<div id="adminPanel" style="display:none;">
+  <label>Upload New CSV</label>
+  <input type="file" id="csvUpload" accept=".csv" />
+</div>
+
+<label>Or Switch to Previous Upload</label>
+<select id="versionSelect">
+  <option value="">-- Select a saved version --</option>
+</select>
+
+<label>Search Dive Site</label>
+<input type="text" id="searchInput" placeholder="Type a dive site name...">
+
+<div class="result" id="resultContainer" style="display:none;">
+  <h3 id="siteName"></h3>
+  <canvas id="qrCode"></canvas>
+</div>
+
+<script>
+let qr = new QRious({ element: document.getElementById("qrCode"), size: 200 });
+let data = [];
+
+function updateUI(query) {
+  const match = data.find(item => item["Dive Site"].toLowerCase().includes(query.toLowerCase()));
+  if (match) {
+    document.getElementById("siteName").textContent = match["Dive Site"];
+    qr.value = match["QR Code text"];
+    document.getElementById("resultContainer").style.display = "block";
+  } else {
+    document.getElementById("resultContainer").style.display = "none";
+  }
+}
+
+document.getElementById("searchInput").addEventListener("input", e => {
+  updateUI(e.target.value);
+});
+
+document.getElementById("csvUpload").addEventListener("change", e => {
+  const file = e.target.files[0];
+  if (file) {
+    Papa.parse(file, {
+      header: true,
+      skipEmptyLines: true,
+      complete: results => {
+        data = results.data;
+        const versionName = file.name + " (" + new Date().toLocaleString() + ")";
+        localStorage.setItem("diveqr_" + versionName, JSON.stringify(data));
+        loadVersions();
+        document.getElementById("versionSelect").value = "diveqr_" + versionName;
+        document.getElementById("searchInput").value = "";
+        updateUI("");
+      }
+    });
+  }
+});
+
+document.getElementById("versionSelect").addEventListener("change", e => {
+  const key = e.target.value;
+  if (key && localStorage.getItem(key)) {
+    data = JSON.parse(localStorage.getItem(key));
+    document.getElementById("searchInput").value = "";
+    updateUI("");
+  }
+});
+
+function loadVersions() {
+  const select = document.getElementById("versionSelect");
+  select.innerHTML = '<option value="">-- Select a saved version --</option>';
+  Object.keys(localStorage).forEach(key => {
+    if (key.startsWith("diveqr_")) {
+      const opt = document.createElement("option");
+      opt.value = key;
+      opt.textContent = key.replace("diveqr_", "");
+      select.appendChild(opt);
+    }
+  });
+}
+
+function adminLogin() {
+  const password = prompt("Enter admin password:");
+  if (password === "admin123") {
+    document.getElementById("adminPanel").style.display = "block";
+    alert("Admin access granted.");
+  } else {
+    alert("Incorrect password.");
+  }
+}
+
+window.onload = function() {
+  loadVersions();
+
+  // Default example data
+  data = [
+    { "Dive Site": "Anthony’s Reef", "QR Code text": "site;247986" },
+    { "Dive Site": "Aquarium", "QR Code text": "site;228304" },
+    { "Dive Site": "Broken Ledge", "QR Code text": "site;306577" }
+  ];
+};
+</script>
+
+</body>
+</html>
