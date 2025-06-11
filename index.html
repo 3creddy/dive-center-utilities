@@ -32,15 +32,19 @@
 
 <button onclick="adminLogin()">Login as Admin</button>
 
+<!-- Admin Upload Panel -->
 <div id="adminPanel" style="display:none;">
   <label>Upload New CSV</label>
   <input type="file" id="csvUpload" accept=".csv" />
 </div>
 
-<label>Or Switch to Previous Upload</label>
-<select id="versionSelect">
-  <option value="">-- Select a saved version --</option>
-</select>
+<!-- Admin Version Switcher -->
+<div id="versionSwitcher" style="display:none;">
+  <label>Or Switch to Previous Upload</label>
+  <select id="versionSelect">
+    <option value="">-- Select a saved version --</option>
+  </select>
+</div>
 
 <label>Search Dive Site</label>
 <input type="text" id="searchInput" placeholder="Type a dive site name...">
@@ -114,6 +118,7 @@ function adminLogin() {
   const password = prompt("Enter admin password:");
   if (password === "admin123") {
     document.getElementById("adminPanel").style.display = "block";
+    document.getElementById("versionSwitcher").style.display = "block";
     alert("Admin access granted.");
   } else {
     alert("Incorrect password.");
@@ -123,7 +128,7 @@ function adminLogin() {
 window.onload = function() {
   loadVersions();
 
-  // Default example data
+  // Default embedded data (safe fallback)
   data = [
 { "Dive Site": "Anthony’s Reef", "QR Code text": "site;247986" },
 { "Dive Site": "Aquarium", "QR Code text": "site;228304" },
