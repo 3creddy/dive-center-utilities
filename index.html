@@ -1,65 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Dive Center Utilities</title>
-<link rel="stylesheet" href="style.css" />
-<style>
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  background: #f4f4f4;
-}
-header {
-  background: #006d77;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-}
-.container {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-  padding: 40px;
-}
-.card {
-  background: #fff;
-  border-radius: 10px;
-  padding: 20px;
-  width: 250px;
-  text-align: center;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  text-decoration: none;
-  color: inherit;
-  transition: transform 0.2s ease;
-}
-.card:hover {
-  transform: translateY(-5px);
-}
-.card h2 {
-  margin-top: 0;
-}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DIVEIndia Tools</title>
+  <style>
+    body {
+      background-color: #1e1e1e;
+      color: #fff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+      padding: 2rem;
+      box-sizing: border-box;
+    }
+    h1 {
+      color: #00bcd4;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+    .button-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      width: 100%;
+      max-width: 600px;
+    }
+    a.button {
+      flex: 1 1 calc(50% - 1rem);
+      min-width: 220px;
+      text-align: center;
+      padding: 1rem 2rem;
+      background-color: #00bcd4;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 1.2rem;
+      transition: background 0.3s;
+    }
+    a.button:hover {
+      background-color: #0097a7;
+    }
+    @media (max-width: 480px) {
+      a.button {
+        flex: 1 1 100%;
+      }
+    }
+  </style>
 </head>
 <body>
-<header>
-  <h1>Dive Center Utilities</h1>
-</header>
-<div class="container">
-  <a class="card" href="dive-site-qr-code.html">
-    <h2>Dive Site QR Codes</h2>
-    <p>Generate and manage QR codes for dive sites.</p>
-  </a>
-  <a class="card" href="conditions.html">
-    <h2>Conditions</h2>
-    <p>Check weather, wind, and tide conditions.</p>
-  </a>
-  <a class="card" href="sops/index.html">
-    <h2>Dive Center SOPs</h2>
-    <p>Open Water & Divemaster (editable)</p>
-  </a>
-</div>
+  <h1>Welcome to DIVEIndia Tools</h1>
+  <div class="button-container">
+    <a class="button" href="./dive-site-qr-code">Dive Site QR Code Generator</a>
+    <a class="button" href="./conditions">Wind & Tide Forecast</a>
+    <a class="button" href="./sops/index.html">Dive Center SOPs</a>
+  </div>
 </body>
 </html>
