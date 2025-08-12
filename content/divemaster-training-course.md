@@ -1,6 +1,6 @@
 # Divemaster Training Course SOP
 
-# DIVEIndia – Divemaster Training Course SOP
+# DIVEIndia - Divemaster Training Course SOP
 **Version:** 1.0  
 **Status:** Active  
 **Last Updated:** YYYY-MM-DD  
@@ -8,7 +8,7 @@
 ---
 
 ## 1. Purpose & Philosophy
-The Dive India Divemaster Training Course is designed to produce world-class dive professionals who are confident, competent, environmentally responsible, and industry-ready. This program combines Scuba Schools International (SSI) training standards with Dive India’s unique operational environment and philosophy, offering candidates a blend of structured academic instruction, real-world dive center experience, and professional development.
+The Dive India Divemaster Training Course is designed to produce world-class dive professionals who are confident, competent, environmentally responsible, and industry-ready. This program combines Scuba Schools International (SSI) training standards with Dive India's unique operational environment and philosophy, offering candidates a blend of structured academic instruction, real-world dive center experience, and professional development.
 
 ---
 
@@ -16,8 +16,8 @@ The Dive India Divemaster Training Course is designed to produce world-class div
 - **Minimum age:** 18 years  
 - **Swimming ability:** Ability to swim 400 m and float/tread water for 10 minutes  
 - **Medical:** Fit to dive (medical clearance within the last 12 months)  
-- **Commitment:** Willingness to commit to a full-time internship for the agreed duration (2–6 months based on entry-level certification and experience)  
-- **Agreement:** Read and signed Candidate–Dive Center Agreement (Appendix A)
+- **Commitment:** Willingness to commit to a full-time internship for the agreed duration (2-6 months based on entry-level certification and experience)  
+- **Agreement:** Read and signed Candidate-Dive Center Agreement (Appendix A)
 
 ---
 
@@ -35,14 +35,14 @@ The Dive India Divemaster Training Course is designed to produce world-class div
 ---
 
 ## 4. Weekly Expectations
-- **Internship days:** 5–6 days/week  
+- **Internship days:** 5-6 days/week  
 - Participation in:
   - Daily dive operations  
   - Equipment cleaning, storage, and logistics  
-  - Staff meetings (“Bubble Briefs”)  
+  - Staff meetings ("Bubble Briefs")  
   - Weekly mentor check-ins  
 - Arrive **at least 30 minutes** before your scheduled reporting time  
-- Keep equipment ready, personal dive log up to date, and follow the day’s dive plan
+- Keep equipment ready, personal dive log up to date, and follow the day's dive plan
 
 ---
 
@@ -86,7 +86,7 @@ Candidates must:
 - Use clear, respectful communication with staff, guests, and other interns  
 - Refrain from language or behaviour that is offensive, discriminatory, or unprofessional  
 - Show punctuality, reliability, and readiness to take initiative  
-- Model environmental responsibility — avoid touching marine life, secure gear to prevent reef damage
+- Model environmental responsibility - avoid touching marine life, secure gear to prevent reef damage
 
 ---
 
@@ -147,7 +147,7 @@ Candidates must:
 
 ## Appendices
 
-### Appendix A – Candidate–Dive Center Agreement
+### Appendix A - Candidate-Dive Center Agreement
 1. **Commitment:** Full participation in all training, dives, and assignments.  
 2. **Behaviour:** Maintain professionalism, punctuality, and positive attitude.  
 3. **Compliance:** Follow Dive India SOPs, safety standards, and SSI protocols.  
@@ -157,15 +157,15 @@ Candidates must:
 
 ---
 
-### Appendix B – Sample Internship Schedule & Pricing
+### Appendix B - Sample Internship Schedule & Pricing
 
 | Duration | Entry Requirement | Progression Outline | Price (INR) | Notes |
 |----------|------------------|---------------------|-------------|-------|
 | **3 weeks** | Certified diver (SSI/PADI Advanced or equivalent) | Selected modules; academic review; limited assists & workshops. | ₹XXX | Ideal for sampling professional training. |
 | **2 months** | Certified diver (SSI/PADI Advanced or equivalent) | Full academic + water skills + guided assists + partial workshops. | ₹XXX | Balanced training with competence development. |
 | **3 months** | Certified diver (SSI/PADI Advanced or equivalent) | Complete Divemaster curriculum + workshops, eco modules, leadership practice. | ₹XXX | Time for skill consolidation and leadership exposure. |
-| **6 months (Zero to Hero)** | None (no prior certification) | Open Water → Advanced → Rescue → Dive Guide → Science of Diving → Divemaster completion pathway. | ₹XXX | Full immersion from beginner to Divemaster. |
-| **Custom: Rescue Diver entry** | Rescue Diver certified (SSI or equivalent) | Skip Rescue module; begin at Dive Guide phase → Science of Diving → Divemaster. | ₹XXX | Reduced duration; for candidates who already hold Rescue Diver certification. |
+| **6 months (Zero to Hero)** | None (no prior certification) | Open Water -> Advanced -> Rescue -> Dive Guide -> Science of Diving -> Divemaster completion pathway. | ₹XXX | Full immersion from beginner to Divemaster. |
+| **Custom: Rescue Diver entry** | Rescue Diver certified (SSI or equivalent) | Skip Rescue module; begin at Dive Guide phase -> Science of Diving -> Divemaster. | ₹XXX | Reduced duration; for candidates who already hold Rescue Diver certification. |
 
 > Pricing to be reviewed annually; includes tuition, materials, and certification fees where applicable. Accommodation, food, and personal expenses are not included.
 
@@ -176,11 +176,11 @@ Candidates must:
 
 ---
 
-### Appendix C – Weekly Review Template
+### Appendix C - Weekly Review Template
 *(criteria: skills, academics, professionalism, attendance)*
 
 ---
 
-### Appendix D – Exit Checklist
+### Appendix D - Exit Checklist
 *(gear return, documents, certification submission, feedback forms)*
 
