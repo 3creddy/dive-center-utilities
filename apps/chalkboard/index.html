@@ -74,6 +74,35 @@
     a{color:var(--accent);text-decoration:none;border-bottom:1px dotted var(--accent)}
     .hidden{display:none !important;}
     .updated{margin-top:8px;opacity:.75;font:400 15px "Nunito", sans-serif;text-align:right}
+	
+	/* Wind rows */
+.rowline{display:flex;justify-content:space-between;gap:10px;margin:4px 0}
+.rowline .label{opacity:.9}
+.rowline .val{font-weight:700}
+
+/* Mini compass */
+.compass{
+  width:64px;height:64px;border-radius:999px;
+  border:1px dashed rgba(255,255,255,.35);
+  position:relative; margin-top:6px; flex:0 0 auto; display:grid; place-items:center;
+}
+.compass .tick{
+  position:absolute; width:2px; height:8px; background:rgba(255,255,255,.6); top:2px; left:50%; transform:translateX(-50%);
+}
+.compass .needle{
+  position:absolute; width:2px; height:26px; background:var(--chalk);
+  top:50%; left:50%; transform-origin:50% 90%;
+  border-radius:2px;
+}
+.compass .N,.compass .E,.compass .S,.compass .W{
+  position:absolute; font-size:12px; opacity:.85;
+}
+.compass .N{top:2px; left:50%; transform:translateX(-50%)}
+.compass .S{bottom:2px; left:50%; transform:translateX(-50%)}
+.compass .E{right:4px; top:50%; transform:translateY(-50%)}
+.compass .W{left:4px; top:50%; transform:translateY(-50%)}
+.dirwrap{display:flex; align-items:center; gap:10px}
+
   </style>
 </head>
 <body>
@@ -167,19 +196,45 @@ function setError(id, e){
 }
 function renderWind(key, data){
   const el = document.getElementById(`wind-${key}`);
-  const slots = ['morning','noon','evening'];
+  const slots = [
+    {id:'morning', label:'Morning', hh:'06:00'},
+    {id:'noon',    label:'Noon',    hh:'12:00'},
+    {id:'evening', label:'Evening', hh:'18:00'},
+  ];
   el.innerHTML = '';
+
   slots.forEach(s => {
-    const w = data[s];
+    const w = data[s.id];
     const card = document.createElement('div');
     card.className = 'card';
-    const when = s==='morning'?'06:00':(s==='noon'?'12:00':'18:00');
+
+    // three-row layout + mini compass
     card.innerHTML = `
-      <h4>${s[0].toUpperCase()+s.slice(1)}</h4>
-      <div class="big">
-        ${Math.round(w.speed)} kn (gust ${Math.round(w.gust)} kn) · ${degToCompass(w.dir)}
+      <h4>${s.label}</h4>
+
+      <div class="rowline">
+        <span class="label">Speed</span>
+        <span class="val">${Math.round(w.speed)} kn</span>
       </div>
-      <div class="muted">${when} IST</div>
+
+      <div class="rowline">
+        <span class="label">Gust</span>
+        <span class="val">${Math.round(w.gust)} kn</span>
+      </div>
+
+      <div class="rowline dirwrap">
+        <div class="compass" aria-label="Wind from ${degToCompass(w.dir)}">
+          <div class="tick"></div>
+          <div class="needle" style="transform:translate(-50%,-90%) rotate(${Math.round(w.dir)}deg);"></div>
+          <div class="N">N</div><div class="E">E</div><div class="S">S</div><div class="W">W</div>
+        </div>
+        <div>
+          <div class="val">${degToCompass(w.dir)}</div>
+          <div class="muted">${Math.round(w.dir)}°</div>
+        </div>
+      </div>
+
+      <div class="muted">${s.hh} IST</div>
     `;
     el.appendChild(card);
   });
