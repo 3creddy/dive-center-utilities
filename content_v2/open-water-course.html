@@ -1,11 +1,22 @@
-
+<style>
+.sop-table { border-collapse: collapse; width: 100%; margin-bottom: 1em; }
+.sop-table th, .sop-table td { border: 1px solid #ddd; padding: 8px; }
+.sop-table th { text-align: left; background: #f4f4f4; }
+.important { padding: 12px; border-left: 4px solid #f39c12; background: #fff8e6; margin-bottom: 1em; }
+@media (max-width: 600px) {
+  .sop-table, .sop-table thead, .sop-table tbody, .sop-table th, .sop-table td, .sop-table tr { display: block; width: 100%; }
+  .sop-table tr { margin-bottom: 1em; }
+  .sop-table td { text-align: right; padding-left: 50%; position: relative; }
+  .sop-table td::before { content: attr(data-label); position: absolute; left: 0; width: 45%; padding-left: 8px; font-weight: bold; text-align: left; }
+}
+</style>
 <h1>Dive India - Open Water Diver Course SOP</h1>
-<p><strong>Version:</strong> 1.0 &nbsp; <strong>Status:</strong> Active &nbsp; <strong>Last Updated:</strong> YYYY-MM-DD</p>
+<p><strong>Version:</strong> 1.0   <strong>Status:</strong> Active   <strong>Last Updated:</strong> YYYY-MM-DD</p>
 <hr/>
 <h2>1. Purpose &amp; Scope</h2>
 <p>This SOP supplements the SSI Instructor Manual and skill checklists. It defines Dive India's operational standards for delivering the Open Water Diver course, ensuring consistency in training, safety, and customer experience across instructors.</p>
 <ul>
-<li>Two primary student pathways (Full-Course/In-House & Referral)</li>
+<li>Two primary student pathways (Full-Course/In-House &amp; Referral)</li>
 <li>Certification outcomes (Open Water Diver, Scuba Diver, No Certification)</li>
 <li>Paperwork and pre-dive checks</li>
 <li>Course structure and day-by-day breakdown</li>
@@ -48,18 +59,18 @@
 <li>Be tactful but clear about reasons for non-certification.</li>
 </ul>
 <h2>4. Pricing Guidance (Placeholder)</h2>
-<blockquote>
-<p><strong>Reference Pricing (as of YYYY):</strong><br/>
-- Full Open Water Diver: ₹33,000<br/>
-- Scuba Diver: ₹27,500<br/>
-- Referral to Open Water Diver: ₹12,000<br/>
-- Referral to Scuba Diver: ₹8,000</p>
-<p><em>Instructors must:</em><br/>
-- Clearly explain pricing differences before course commencement, especially if a student may receive SD instead of OWD.<br/>
-- Advise on upgrade pricing and pathways.<br/>
-- Refer to the latest internal pricing sheet for current rates.</p>
-</blockquote>
-<h2>5. Paperwork &amp; Eligibility Checks</h2>
+
+<table class="sop-table">
+<thead><tr><th>Pathway</th><th>Outcome</th><th>Price</th></tr></thead>
+<tbody>
+<tr><td>Full Course</td><td>Open Water Diver</td><td>₹33,000</td></tr>
+<tr><td>Full Course (partial completion)</td><td>Scuba Diver</td><td>₹27,500</td></tr>
+<tr><td>Referral Completion</td><td>Open Water Diver</td><td>₹12,000</td></tr>
+<tr><td>Referral Completion (limited)</td><td>Scuba Diver</td><td>₹8,000</td></tr>
+</tbody>
+</table>
+
+<h2>5. Paperwork &amp; Eligibility Checks</h2><div class="important">Important: All paperwork must be reviewed and confirmed before any water entry (confined or open water).</div>
 <p><strong>No student may enter the water</strong> until the following is complete and verified by the instructor or delegated staff:</p>
 <ol>
 <li>Responsible Diver Code signed</li>
@@ -77,23 +88,23 @@
 <li>Default activity: Long snorkel session instead of formal swim test (students may request standard swim test)</li>
 <li>Objectives: Familiarity with mask, fins, snorkel; practice mask clearing; introduce BC with oral inflation, bobbing method, BC removal/replacement at surface, deflation</li>
 <li><strong>Equipment Briefing:</strong>
-  <ul>
-    <li><strong>Cylinder:</strong> Parts, hydrostatic test (India: 5-year interval), visual check (dents/damage), O-ring present, gas smell test</li>
-    <li><strong>BCD:</strong> LPI hose, dump valves/OPVs, harness fit, releases</li>
-    <li><strong>Regulator:</strong> 1st stage, 2nd stage, SPG, LPI hose</li>
-    <li><strong>Mask/Fins/Snorkel:</strong> Fit and adjustment, clearing</li>
-    <li><strong>Exposure Suit:</strong> Fit and comfort</li>
-    <li><strong>Dive Computer:</strong> Display basics, depth/time, alarms</li>
-    <li><strong>Compass:</strong> Basic heading set/use</li>
-    <li>Setup, inflation/deflation practice</li>
-    <li><strong>SSI ABC Buddy Check:</strong>
-      <ul>
-        <li><strong>A - Air Delivery System:</strong> Check regulator setup, SPG pressure, alternate air source, proper hose routing, and breathing from both primary and alternate.</li>
-        <li><strong>B - Buoyancy Control System:</strong> Includes weights/weight belt. Test BCD inflation/deflation, ensure LPI hose connection is secure, dump valves working, weights correctly fitted and releasable.</li>
-        <li><strong>C - Clips:</strong> Confirm all dangling equipment is clipped/secured to avoid entanglement or reef contact.</li>
-      </ul>
-    </li>
-  </ul>
+<ul>
+<li><strong>Cylinder:</strong> Parts, hydrostatic test (India: 5-year interval), visual check (dents/damage), O-ring present, gas smell test</li>
+<li><strong>BCD:</strong> LPI hose, dump valves/OPVs, harness fit, releases</li>
+<li><strong>Regulator:</strong> 1st stage, 2nd stage, SPG, LPI hose</li>
+<li><strong>Mask/Fins/Snorkel:</strong> Fit and adjustment, clearing</li>
+<li><strong>Exposure Suit:</strong> Fit and comfort</li>
+<li><strong>Dive Computer:</strong> Display basics, depth/time, alarms</li>
+<li><strong>Compass:</strong> Basic heading set/use</li>
+<li>Setup, inflation/deflation practice</li>
+<li><strong>SSI ABC Buddy Check:</strong>
+<ul>
+<li><strong>A - Air Delivery System:</strong> Check regulator setup, SPG pressure, alternate air source, proper hose routing, and breathing from both primary and alternate.</li>
+<li><strong>B - Buoyancy Control System:</strong> Includes weights/weight belt. Test BCD inflation/deflation, ensure LPI hose connection is secure, dump valves working, weights correctly fitted and releasable.</li>
+<li><strong>C - Clips:</strong> Confirm all dangling equipment is clipped/secured to avoid entanglement or reef contact.</li>
+</ul>
+</li>
+</ul>
 </li>
 <li><strong>Policy:</strong> No cameras during any course sessions.</li>
 </ul>
