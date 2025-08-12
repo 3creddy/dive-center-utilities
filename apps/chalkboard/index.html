@@ -4,61 +4,76 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>DIVEIndia – Tomorrow’s Wind & Tide Chalkboard</title>
-  <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+  <!-- Decorative for headings; clean Nunito for all body text -->
+  <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
       --board:#1f3d2b; --chalk:#f2f2f2; --accent:#bfe3c0;
-      --fs-base:18px; --fs-h1:34px; --fs-h2:26px;
-      --fs-chip:18px; --fs-card-title:22px; --fs-card-big:26px;
-      --fs-muted:16px; --pad:16px;
+      --fs-base:19px; --fs-h1:36px; --fs-h2:28px;
+      --fs-chip:19px; --fs-card-title:24px; --fs-card-big:30px;
+      --fs-muted:17px; --pad:16px;
     }
-    html,body{margin:0;padding:0;background:#0b0f0e;color:var(--chalk);font-family:"Shadows Into Light", system-ui, sans-serif;font-size:var(--fs-base);}
+    html,body{
+      margin:0;padding:0;background:#0b0f0e;color:var(--chalk);
+      font-family:"Nunito", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+      font-size:var(--fs-base); line-height:1.45;
+      text-rendering:optimizeLegibility; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+    }
     .wrap{max-width:1200px;margin:0 auto;padding:var(--pad);}
-    h1{font-size:var(--fs-h1);letter-spacing:1px;text-align:center;margin:8px 0 12px;}
-    .sub{opacity:.85;text-align:center;margin-bottom:12px;font-size:18px}
-    .controls{display:flex;justify-content:center;gap:8px;margin:8px 0 16px;}
-    .btn{
-      font:inherit; color:var(--chalk); background:rgba(255,255,255,.08);
-      border:1px dashed rgba(255,255,255,.35); border-radius:12px; padding:6px 12px; cursor:pointer;
+    h1{
+      font-family:"Shadows Into Light", cursive;
+      font-size:var(--fs-h1); letter-spacing:.5px; text-align:center; margin:8px 0 8px;
     }
-    .btn.active{background:rgba(255,255,255,.18)}
+    .sub{opacity:.9;text-align:center;margin-bottom:12px;font-size:18px}
+    .controls{display:flex;justify-content:center;gap:10px;margin:10px 0 18px;}
+    .btn{
+      font:600 18px "Nunito", sans-serif; color:var(--chalk);
+      background:rgba(255,255,255,.10);
+      border:1px dashed rgba(255,255,255,.35); border-radius:12px; padding:8px 14px; cursor:pointer;
+    }
+    .btn.active{background:rgba(255,255,255,.20)}
     .grid{display:grid;grid-template-columns:1fr;gap:16px}
     @media(min-width:900px){.grid{grid-template-columns:1fr 1fr}}
     .board{
       background:var(--board); color:var(--chalk);
-      border:10px solid #4a2f1b; border-radius:18px; padding:16px 18px 20px;
+      border:10px solid #4a2f1b; border-radius:18px; padding:18px 20px 22px;
       box-shadow:0 12px 30px rgba(0,0,0,.4), inset 0 0 12px rgba(255,255,255,.06); position:relative;
     }
     .board:before{
       content:""; position:absolute; inset:10px;
       background:radial-gradient(200px 70px at 20% 10%, rgba(255,255,255,.06), transparent 60%),
-                 radial-gradient(200px 70px at 80% 90%, rgba(255,255,255,.05), transparent 60%); pointer-events:none;
+                 radial-gradient(200px 70px at 80% 90%, rgba(255,255,255,.05), transparent 60%);
+      pointer-events:none;
     }
-    .title{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
-    .title h2{margin:0;font-size:var(--fs-h2)}
-    .date{font-size:18px;opacity:.9}
-    .section{border-top:1px dashed rgba(255,255,255,.25);padding-top:10px;margin-top:12px}
+    .title{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+    .title h2{
+      margin:0;font-size:var(--fs-h2);
+      font-family:"Shadows Into Light", cursive;
+      letter-spacing:.4px;
+    }
+    .date{font-size:19px;opacity:.95}
+    .section{border-top:1px dashed rgba(255,255,255,.25);padding-top:12px;margin-top:14px}
     .row{display:flex;gap:10px;flex-wrap:wrap}
     .chip{
-      border:1px dashed rgba(255,255,255,.35); border-radius:12px; padding:6px 10px;
-      font-size:var(--fs-chip); background:rgba(255,255,255,.06); text-shadow:0 1px 0 rgba(0,0,0,.25);
+      border:1px dashed rgba(255,255,255,.35); border-radius:12px; padding:6px 12px;
+      font:600 var(--fs-chip) "Nunito", sans-serif; background:rgba(255,255,255,.06);
     }
-    .wind-cards{display:grid;grid-template-columns:1fr;gap:10px}
+    .wind-cards{display:grid;grid-template-columns:1fr;gap:12px}
     @media(min-width:520px){.wind-cards{grid-template-columns:1fr 1fr 1fr}}
     .card{
       background:rgba(0,0,0,.15); border:1px dashed rgba(255,255,255,.25);
-      border-radius:14px; padding:12px 14px; min-height:100px;
+      border-radius:14px; padding:14px 16px; min-height:110px;
     }
-    .card h4{margin:0 0 6px 0;font-size:var(--fs-card-title)}
-    .big{font-size:var(--fs-card-big);line-height:1.15}
-    .muted{opacity:.85;font-size:var(--fs-muted)}
-    .tides{display:grid;grid-template-columns:1fr;gap:10px}
-    .badge{display:inline-block;border:1px solid rgba(255,255,255,.35);padding:2px 8px;border-radius:999px;margin-left:6px;font-size:16px}
+    .card h4{margin:0 0 6px 0;font:700 var(--fs-card-title) "Nunito", sans-serif}
+    .big{font:700 var(--fs-card-big) "Nunito", sans-serif; line-height:1.2}
+    .muted{opacity:.95;font:400 var(--fs-muted) "Nunito", sans-serif}
+    .tides{display:grid;grid-template-columns:1fr;gap:12px}
+    .badge{display:inline-block;border:1px solid rgba(255,255,255,.35);padding:3px 10px;border-radius:999px;margin-left:6px;font:600 16px "Nunito", sans-serif}
     .err{color:#ffb3b3}
-    .foot{margin-top:8px;opacity:.75;font-size:16px;text-align:right}
+    .foot{margin-top:8px;opacity:.8;font:400 16px "Nunito", sans-serif;text-align:right}
     a{color:var(--accent);text-decoration:none;border-bottom:1px dotted var(--accent)}
     .hidden{display:none !important;}
-    .updated{margin-top:6px;opacity:.65;font-size:14px;text-align:right}
+    .updated{margin-top:8px;opacity:.75;font:400 15px "Nunito", sans-serif;text-align:right}
   </style>
 </head>
 <body>
@@ -71,7 +86,7 @@
       <button class="btn" data-view="neil">Neil</button>
     </div>
     <div class="grid" id="boards"></div>
-    <div class="foot">DIVEIndia · Font sizes adjustable via CSS vars at top.</div>
+    <div class="foot">DIVEIndia · Font sizes and families adjustable at the top.</div>
   </div>
 <script>
 const LOCATIONS = [
