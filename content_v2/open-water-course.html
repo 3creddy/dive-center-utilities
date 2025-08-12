@@ -9,11 +9,29 @@
   .sop-table td { text-align: right; padding-left: 50%; position: relative; }
   .sop-table td::before { content: attr(data-label); position: absolute; left: 0; width: 45%; padding-left: 8px; font-weight: bold; text-align: left; }
 }
+
+
+/* SOP scaffold */
+body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; line-height:1.5; padding: 16px; }
+#toc { background:#f7f7f7; padding:12px; border-radius:8px; margin: 12px 0 20px; }
+#toc ol { margin:0; padding-left:20px; }
+.sop-table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+.sop-table th, .sop-table td { border: 1px solid #ddd; padding: 8px; vertical-align: top; }
+.sop-table th { background: #f4f4f4; text-align:left; }
+.important { padding: 12px; border-left: 4px solid #f39c12; background: #fff8e6; margin: 12px 0; }
+caption { text-align:left; font-weight:600; margin-bottom:6px; }
+@media (max-width: 720px) {
+  .sop-table, .sop-table thead, .sop-table tbody, .sop-table th, .sop-table td, .sop-table tr { display: block; width: 100%; }
+  .sop-table thead { display:none; }
+  .sop-table tr { margin-bottom: 12px; }
+  .sop-table td { text-align: right; padding-left: 50%; position: relative; }
+  .sop-table td::before { content: attr(data-label); position: absolute; left: 8px; width: 45%; font-weight: 600; text-align: left; }
+}
 </style>
-<h1>Dive India - Open Water Diver Course SOP</h1>
-<p><strong>Version:</strong> 1.0   <strong>Status:</strong> Active   <strong>Last Updated:</strong> YYYY-MM-DD</p>
+<h1>DIVEIndia — Open Water Diver Course SOP</h1>
+<p><strong>Version: </strong>1.0  <strong>Status: </strong>Active  <strong>Last Updated: </strong>2025-08-12</p><nav id="toc"><h2>Contents</h2><ol><li><a href="#1-purpose-scope">1. Purpose &amp; Scope</a></li><li><a href="#2-student-pathways">2. Student Pathways</a></li><li><a href="#3-certification-pathways">3. Certification Pathways</a></li><li><a href="#4-pricing-guidance-placeholder">4. Pricing Guidance (Placeholder)</a></li><li><a href="#5-paperwork-eligibility-checks">5. Paperwork &amp; Eligibility Checks</a></li><li><a href="#6-course-structure">6. Course Structure</a></li><li><a href="#7-site-selection-guidelines">7. Site Selection Guidelines</a></li><li><a href="#8-certification-decision-documentation">8. Certification Decision &amp; Documentation</a></li><li><a href="#9-instructor-reminders">9. Instructor Reminders</a></li></ol></nav>
 <hr/>
-<h2>1. Purpose &amp; Scope</h2>
+<h2 id="1-purpose-scope">1. Purpose &amp; Scope</h2>
 <p>This SOP supplements the SSI Instructor Manual and skill checklists. It defines Dive India's operational standards for delivering the Open Water Diver course, ensuring consistency in training, safety, and customer experience across instructors.</p>
 <ul>
 <li>Two primary student pathways (Full-Course/In-House &amp; Referral)</li>
@@ -24,10 +42,64 @@
 <li>Equipment briefing details</li>
 <li>Instructor guidance on pricing and upgrade scenarios</li>
 </ul>
-<h2>2. Student Pathways</h2>
+<h2 id="2-student-pathways">2. Student Pathways</h2>
 <h3>2.1 Full-Course (In-House) Students</h3>
+<table class="sop-table" id="schedule-full">
+<caption>Schedule — Full Course (4 Days)</caption>
+<thead>
+<tr><th>Day</th><th>Location / Site</th><th>Training Blocks</th><th>Assessments</th></tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Nemo Reef (Confined Water — default)</td>
+<td>Orientation, equipment briefing, snorkel/low-stress swim, CW 1–2 skills, academics</td>
+<td>Paperwork verified before water; CW skills sign‑off</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Nemo Reef (Confined Water)</td>
+<td>Confined Water 3–5 skills, academics</td>
+<td>CW mastery check; knowledge review</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Open Water site</td>
+<td>Open Water Dives 1–2; buddy procedures</td>
+<td>OW dive performance criteria</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Open Water site</td>
+<td>Open Water Dives 3–4; final knowledge review</td>
+<td>Final evaluation → OWD / SD / No Cert</td>
+</tr>
+</tbody>
+</table>
+
 <p>Students completing the entire SSI Open Water Diver course (confined water, theory, and open water dives) with Dive India over four days.</p>
 <h3>2.2 Referral Students</h3>
+<table class="sop-table" id="schedule-referral">
+<caption>Schedule — Referral Students (2 Days)</caption>
+<thead>
+<tr><th>Day</th><th>Prereqs &amp; Docs</th><th>Training Blocks</th><th>Assessments</th></tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Referral paperwork &amp; prior CW sign‑offs verified before water</td>
+<td>Refresher/buoyancy as needed; Open Water Dives 1–2</td>
+<td>OW 1–2 performance criteria</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Day-of fitness to dive confirmed</td>
+<td>Open Water Dives 3–4; remedial skills if required</td>
+<td>Final evaluation → OWD / SD / No Cert</td>
+</tr>
+</tbody>
+</table>
+
 <p>Students who have completed part of their training (usually with a dive center in their city) and arrive with:</p>
 <ul>
 <li>Completed confined water (pool) training</li>
@@ -36,7 +108,7 @@
 <li>Referral paperwork documenting above</li>
 </ul>
 <p>Referral courses at Dive India consist of two training days with four open water dives.</p>
-<h2>3. Certification Pathways</h2>
+<h2 id="3-certification-pathways">3. Certification Pathways</h2>
 <h3>3.1 Open Water Diver (OWD)</h3>
 <ul>
 <li>Full certification under ISO 24801-2 (Autonomous Diver)</li>
@@ -58,19 +130,26 @@
 <li>Explain upgrade options if the student chooses to continue training in the future.</li>
 <li>Be tactful but clear about reasons for non-certification.</li>
 </ul>
-<h2>4. Pricing Guidance (Placeholder)</h2>
-
-<table class="sop-table">
+<h2 id="4-pricing-guidance-placeholder">4. Pricing Guidance (Placeholder)</h2>
+<table class="sop-table" id="pricing">
 <thead><tr><th>Pathway</th><th>Outcome</th><th>Price</th></tr></thead>
 <tbody>
-<tr><td>Full Course</td><td>Open Water Diver</td><td>₹33,000</td></tr>
-<tr><td>Full Course (partial completion)</td><td>Scuba Diver</td><td>₹27,500</td></tr>
-<tr><td>Referral Completion</td><td>Open Water Diver</td><td>₹12,000</td></tr>
-<tr><td>Referral Completion (limited)</td><td>Scuba Diver</td><td>₹8,000</td></tr>
+<tr><td data-label="Pathway">Full Course</td><td data-label="Outcome">Open Water Diver</td><td data-label="Price">₹33,000</td></tr>
+<tr><td data-label="Pathway">Full Course (partial completion)</td><td data-label="Outcome">Scuba Diver</td><td data-label="Price">₹27,500</td></tr>
+<tr><td data-label="Pathway">Referral Completion</td><td data-label="Outcome">Open Water Diver</td><td data-label="Price">₹12,000</td></tr>
+<tr><td data-label="Pathway">Referral Completion (limited)</td><td data-label="Outcome">Scuba Diver</td><td data-label="Price">₹8,000</td></tr>
 </tbody>
 </table>
-
-<h2>5. Paperwork &amp; Eligibility Checks</h2><div class="important">Important: All paperwork must be reviewed and confirmed before any water entry (confined or open water).</div>
+<h2 id="5-paperwork-eligibility-checks">5. Paperwork &amp; Eligibility Checks</h2>
+<section id="buddy-check">
+<h2>SSI ABC Buddy Check</h2>
+<ul>
+<li><strong>A – Air delivery system:</strong> Reg setup, SPG pressure, alternate air source, hose routing; breathe from both primary &amp; alternate.</li>
+<li><strong>B – Buoyancy control system:</strong> Include weights. Test BCD inflate/deflate, LPI connection, dumps operational, weights fitted &amp; releasable.</li>
+<li><strong>C – Clips:</strong> Secure dangling equipment to prevent entanglement or reef contact.</li>
+</ul>
+</section>
+<div class="important">Important: All paperwork must be reviewed and confirmed before any water entry (confined or open water).</div>
 <p><strong>No student may enter the water</strong> until the following is complete and verified by the instructor or delegated staff:</p>
 <ol>
 <li>Responsible Diver Code signed</li>
@@ -80,7 +159,7 @@
 <li>Student details entered into Dive India training register</li>
 <li>SSI digital paperwork up to date</li>
 </ol>
-<h2>6. Course Structure</h2>
+<h2 id="6-course-structure">6. Course Structure</h2>
 <h3>6.1 Full-Course (In-House) - 4 Days</h3>
 <h4>Day 1 - Swim Test &amp; Equipment Briefing</h4>
 <ul>
@@ -139,20 +218,20 @@
 <li>Ensure all remaining skills completed for certification</li>
 <li>If skills incomplete after Day 2, consider SD certification or additional training days (inform pricing)</li>
 </ul>
-<h2>7. Site Selection Guidelines</h2>
+<h2 id="7-site-selection-guidelines">7. Site Selection Guidelines</h2>
 <ul>
 <li>Nemo Reef: Default for confined water and initial open water dives</li>
 <li>Boat dives: Only after instructor confirms student readiness</li>
 <li>Instructor discretion is final for all site decisions</li>
 <li>Safety and comfort take precedence over course completion speed</li>
 </ul>
-<h2>8. Certification Decision &amp; Documentation</h2>
+<h2 id="8-certification-decision-documentation">8. Certification Decision &amp; Documentation</h2>
 <ul>
 <li>Certification level (OWD, SD, No Cert) based on skill mastery and SSI standards</li>
 <li>Students must be informed of: certification awarded, limitations, upgrade process and costs</li>
 <li>Ensure SSI certification submission is complete before student departs</li>
 </ul>
-<h2>9. Instructor Reminders</h2>
+<h2 id="9-instructor-reminders">9. Instructor Reminders</h2>
 <ul>
 <li>Use Dive India's standard student briefing scripts for equipment, safety, and skills</li>
 <li>Document deviations from standard flow and reasons (e.g., weather, student illness)</li>
