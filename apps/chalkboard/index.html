@@ -10,7 +10,7 @@
     :root {
       --board:#1f3d2b; --chalk:#f2f2f2; --accent:#bfe3c0;
       --fs-base:19px; --fs-h1:36px; --fs-h2:28px;
-      --fs-chip:19px; --fs-card-title:24px; --fs-card-big:30px;
+      --fs-chip:19px; --fs-card-title:24px; --fs-card-big:24px;
       --fs-muted:17px; --pad:16px;
     }
     html,body{
@@ -134,7 +134,7 @@ LOCATIONS.forEach(loc => {
       <div class="date">${fmtDateHuman(tomorrowIST)} <span class="badge">Asia/Kolkata</span></div>
     </div>
     <div class="section">
-      <div class="row"><div class="chip">Wind forecast (10 m)</div></div>
+      <div class="row"><div class="chip">Wind forecast (at surface)</div></div>
       <div class="wind-cards" id="wind-${loc.key}">
         <div class="card"><h4>Morning</h4><div class="big">—</div><div class="muted">06:00 IST</div></div>
         <div class="card"><h4>Noon</h4><div class="big">—</div><div class="muted">12:00 IST</div></div>
