@@ -1,4 +1,4 @@
-// netlify/functions/windy.js
+// apps/chalkboard/netlify/functions/windy.js
 export default async (req, context) => {
   try {
     const key = Deno.env.get('WINDY_API_KEY');
@@ -7,7 +7,6 @@ export default async (req, context) => {
     const url = new URL(req.url);
     const lat = parseFloat(url.searchParams.get('lat'));
     const lon = parseFloat(url.searchParams.get('lon'));
-    const date = url.searchParams.get('date'); // YYYY-MM-DD (not used here)
 
     if (Number.isNaN(lat) || Number.isNaN(lon)) {
       return Response.json({ error: 'lat/lon required' }, { status: 400 });

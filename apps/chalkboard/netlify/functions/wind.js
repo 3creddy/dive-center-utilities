@@ -1,10 +1,10 @@
-// netlify/functions/wind.js
+// apps/chalkboard/netlify/functions/wind.js
 export default async (req, context) => {
   try {
     const url = new URL(req.url);
     const lat = url.searchParams.get('lat');
     const lon = url.searchParams.get('lon');
-    const date = url.searchParams.get('date'); // YYYY-MM-DD (IST target day)
+    const date = url.searchParams.get('date');
 
     if (!lat || !lon || !date) {
       return Response.json({ error: 'lat, lon, date required' }, { status: 400 });
@@ -30,7 +30,7 @@ export default async (req, context) => {
     function pickAt(hh){
       const idx = times.findIndex(t => t.endsWith(`${String(hh).padStart(2,'0')}:00`));
       if (idx === -1) return { speed: NaN, gust: NaN, dir: NaN };
-      const K2KT = 0.5399568; // km/h -> knots
+      const K2KT = 0.5399568;
       return {
         speed: (ws[idx] ?? 0) * K2KT,
         gust:  (wg[idx] ?? 0) * K2KT,

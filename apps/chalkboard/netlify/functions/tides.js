@@ -1,4 +1,4 @@
-// netlify/functions/tides.js
+// apps/chalkboard/netlify/functions/tides.js
 export default async (req, context) => {
   try {
     const key = Deno.env.get('WORLDTIDES_API_KEY');
@@ -7,7 +7,7 @@ export default async (req, context) => {
     const url = new URL(req.url);
     const lat = url.searchParams.get('lat');
     const lon = url.searchParams.get('lon');
-    const date = url.searchParams.get('date'); // YYYY-MM-DD (local IST day)
+    const date = url.searchParams.get('date');
 
     if (!lat || !lon || !date) {
       return Response.json({ error: 'lat, lon, date required' }, { status: 400 });
