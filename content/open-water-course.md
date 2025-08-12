@@ -1,4 +1,4 @@
-# Dive India – Open Water Diver Course SOP 
+# Dive India - Open Water Diver Course SOP 
 **Version:** 1.0  
 **Status:** Active  
 **Last Updated:** YYYY-MM-DD  
@@ -61,10 +61,10 @@ Issued when a student cannot meet the requirements for either OWD or SD (e.g., u
 ## 4. Pricing Guidance (Placeholder)
 
 > **Reference Pricing (as of YYYY):**
-> - Full Open Water Diver: ₹33,000  
-> - Scuba Diver: ₹27,500  
-> - Referral to Open Water Diver: ₹12,000  
-> - Referral to Scuba Diver: ₹8,000  
+> - Full Open Water Diver: &#8377;33,000  
+> - Scuba Diver: &#8377;27,500  
+> - Referral to Open Water Diver: &#8377;12,000  
+> - Referral to Scuba Diver: &#8377;8,000  
 >
 > Instructors must:
 > - Clearly explain pricing differences **before** course commencement, especially in situations where a student may receive SD instead of OWD.
@@ -88,8 +88,8 @@ Issued when a student cannot meet the requirements for either OWD or SD (e.g., u
 
 ### 6.1 Full-Course (In-House) — 4 Days
 
-#### **Day 1 – Swim Test & Equipment Briefing**
-- **Water time:** ~90–120 minutes (low-stress introduction)
+#### **Day 1 - Swim Test & Equipment Briefing**
+- **Water time:** ~90-120 minutes (low-stress introduction)
 - **Default activity:** Long snorkel session instead of formal swim test (students may request standard swim test)
 - Objectives:
   - Familiarity with mask, fins, snorkel
@@ -105,22 +105,22 @@ Issued when a student cannot meet the requirements for either OWD or SD (e.g., u
   - **Compass:** Basic heading set/use  
   - Setup, inflation/deflation practice  
   - **SSI ABC Buddy Check:**  
-    - **A – Air Delivery System:** Check regulator setup, SPG pressure, alternate air source, proper hose routing, and breathing from both primary and alternate.  
-    - **B – Buoyancy Control System:** Includes weights/weight belt. Test BCD inflation/deflation, ensure LPI hose connection is secure, dump valves working, weights correctly fitted and releasable.  
-    - **C – Clips:** Confirm all dangling equipment is clipped/secured to avoid entanglement or reef contact.
+    - **A - Air Delivery System:** Check regulator setup, SPG pressure, alternate air source, proper hose routing, and breathing from both primary and alternate.  
+    - **B - Buoyancy Control System:** Includes weights/weight belt. Test BCD inflation/deflation, ensure LPI hose connection is secure, dump valves working, weights correctly fitted and releasable.  
+    - **C - Clips:** Confirm all dangling equipment is clipped/secured to avoid entanglement or reef contact.
 - **Policy:** No cameras during any course sessions.
 
-#### **Day 2 – Confined Water Skills (Nemo Reef, shore entry)**
+#### **Day 2 - Confined Water Skills (Nemo Reef, shore entry)**
 - Complete all confined water skills per SSI Instructor Manual
 - Adjust sequence for student pace; unfinished skills can be completed in Day 3/4
 - Site: Nemo Reef
 
-#### **Day 3 – Open Water Dives 1 & 2**
+#### **Day 3 - Open Water Dives 1 & 2**
 - **If students comfortable:** Move to boat dives
 - **If not comfortable:** Repeat Nemo Reef dives for consolidation
 - Skills: Integrate remaining confined water skills if needed
 
-#### **Day 4 – Open Water Dives 3 & 4**
+#### **Day 4 - Open Water Dives 3 & 4**
 - Site: Boat or Nemo depending on student status after Day 3
 - Complete all required OWD skills
 - Conduct final debrief, log dives, submit certification paperwork
@@ -129,12 +129,12 @@ Issued when a student cannot meet the requirements for either OWD or SD (e.g., u
 
 ### 6.2 Referral Students — 2 Days
 
-#### **Day 1 – Open Water Dives 1 & 2**
+#### **Day 1 - Open Water Dives 1 & 2**
 - Site: Nemo Reef
 - Finish any incomplete deep-water skills from referral paperwork
 - Instructor-student familiarity and comfort check
 
-#### **Day 2 – Open Water Dives 3 & 4**
+#### **Day 2 - Open Water Dives 3 & 4**
 - Site: Boat dives if instructor comfortable; otherwise Nemo Reef
 - Ensure all remaining skills completed for certification
 - If skills incomplete after Day 2, consider SD certification or additional training days (inform pricing)
