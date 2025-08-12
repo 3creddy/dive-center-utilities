@@ -161,11 +161,11 @@ Candidates must:
 
 | Duration | Entry Requirement | Progression Outline | Price (INR) | Notes |
 |----------|------------------|---------------------|-------------|-------|
-| **3 weeks** | Certified diver (SSI/PADI Advanced or equivalent) | Selected modules; academic review; limited assists & workshops. | ₹XXX | Ideal for sampling professional training. |
-| **2 months** | Certified diver (SSI/PADI Advanced or equivalent) | Full academic + water skills + guided assists + partial workshops. | ₹XXX | Balanced training with competence development. |
-| **3 months** | Certified diver (SSI/PADI Advanced or equivalent) | Complete Divemaster curriculum + workshops, eco modules, leadership practice. | ₹XXX | Time for skill consolidation and leadership exposure. |
-| **6 months (Zero to Hero)** | None (no prior certification) | Open Water -> Advanced -> Rescue -> Dive Guide -> Science of Diving -> Divemaster completion pathway. | ₹XXX | Full immersion from beginner to Divemaster. |
-| **Custom: Rescue Diver entry** | Rescue Diver certified (SSI or equivalent) | Skip Rescue module; begin at Dive Guide phase -> Science of Diving -> Divemaster. | ₹XXX | Reduced duration; for candidates who already hold Rescue Diver certification. |
+| **3 weeks** | Certified diver (SSI/PADI Advanced or equivalent) | Selected modules; academic review; limited assists & workshops. | &#8377;XXX | Ideal for sampling professional training. |
+| **2 months** | Certified diver (SSI/PADI Advanced or equivalent) | Full academic + water skills + guided assists + partial workshops. | &#8377;XXX | Balanced training with competence development. |
+| **3 months** | Certified diver (SSI/PADI Advanced or equivalent) | Complete Divemaster curriculum + workshops, eco modules, leadership practice. | &#8377;XXX | Time for skill consolidation and leadership exposure. |
+| **6 months (Zero to Hero)** | None (no prior certification) | Open Water -> Advanced -> Rescue -> Dive Guide -> Science of Diving -> Divemaster completion pathway. | &#8377;XXX | Full immersion from beginner to Divemaster. |
+| **Custom: Rescue Diver entry** | Rescue Diver certified (SSI or equivalent) | Skip Rescue module; begin at Dive Guide phase -> Science of Diving -> Divemaster. | &#8377;XXX | Reduced duration; for candidates who already hold Rescue Diver certification. |
 
 > Pricing to be reviewed annually; includes tuition, materials, and certification fees where applicable. Accommodation, food, and personal expenses are not included.
 
