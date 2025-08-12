@@ -121,6 +121,24 @@
 .compass .W{left:4px; top:50%; transform:translateY(-50%)}
 .dirwrap{display:flex; align-items:center; gap:10px}
 
+.tide-table{
+  width:100%;
+  border-collapse:collapse;
+  font:400 17px "Nunito",sans-serif;
+  margin-top:6px;
+}
+.tide-table th, .tide-table td{
+  padding:6px 8px;
+  text-align:left;
+}
+.tide-table th{
+  border-bottom:1px dashed rgba(255,255,255,.35);
+  font-weight:600;
+}
+.tide-table td{
+  border-bottom:1px dashed rgba(255,255,255,.15);
+}
+
   </style>
 </head>
 <body>
@@ -260,24 +278,33 @@ function renderWind(key, data){
 function renderTides(key, data, dateStr){
   const el = document.getElementById(`tide-${key}`);
   el.innerHTML = '';
+
   let list = (data?.extremes || [])
     .filter(x => x?.timeISO && isSameISTDate(x.timeISO, dateStr))
     .sort((a,b) => new Date(a.timeISO) - new Date(b.timeISO));
+
   if (!list.length){
     el.innerHTML = `<div class="muted">No tide extremes found for this date.</div>`;
     return;
   }
+
+  // Cap to 4 rows max
   list = list.slice(0,4);
+
+  // Build table HTML
+  let html = `<table class="tide-table">
+    <thead><tr><th>Type</th><th>Time</th><th>Height</th></tr></thead>
+    <tbody>`;
   list.forEach(t => {
-    const item = document.createElement('div');
-    item.className = 'card';
-    const kind = t.type === 'High' ? 'High Tide' : 'Low Tide';
-    item.innerHTML = `
-      <div class="big">${kind}</div>
-      <div class="muted">${fmtTimeIST(t.timeISO)} · ${typeof t.height === 'number' ? t.height.toFixed(2) : '—'} m</div>
-    `;
-    el.appendChild(item);
+    html += `<tr>
+      <td>${t.type === 'High' ? 'High Tide' : 'Low Tide'}</td>
+      <td>${fmtTimeIST(t.timeISO)}</td>
+      <td>${typeof t.height === 'number' ? t.height.toFixed(2) + ' m' : '—'}</td>
+    </tr>`;
   });
+  html += `</tbody></table>`;
+
+  el.innerHTML = html;
 }
 function updateTime(key){
   const el = document.getElementById(`updated-${key}`);
