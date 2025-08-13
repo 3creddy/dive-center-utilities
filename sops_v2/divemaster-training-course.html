@@ -1,0 +1,26 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Divemaster Training Course — SOP (HTML)</title>
+<link rel="stylesheet" href="sop.css">
+</head><body>
+<header class="wrap">
+  <h1 id="title">Divemaster Training Course — SOP (HTML)</h1>
+  <p class="subtle">Version: 1.0 · Status: Active</p>
+  <div class="toolbar">
+    <input id="token" type="password" placeholder="GitHub Token (contents:rw)" />
+    <button id="setToken">Set Token</button><span class="spacer"></span>
+    <button id="edit" class="ghost">Edit</button>
+    <button id="save" class="primary">Save</button>
+  </div>
+  <div class="notice" id="status">Ready.</div>
+</header>
+<main class="wrap">
+  <div id="content"></div>
+  <div id="editorWrap" style="display:none;margin-top:16px;">
+    <textarea id="editor" placeholder="Edit raw HTML or Markdown here"></textarea>
+  </div>
+  <footer>Edits commit to <code>/content_v2/divemaster-training-course.html</code>.</footer>
+</main>
+<script src="sop.js"></script>
+<script>wireEditor("content_v2/divemaster-training-course.html","Divemaster Training Course — SOP (HTML)");</script>
+</body></html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Open Water Course — SOP</title>
+<link rel="stylesheet" href="sop.css">
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head><body>
+<header class="wrap">
+  <h1 id="title">Open Water Course — SOP</h1>
+  <p class="subtle">Version: 0.1 · Status: Draft</p>
+  <div class="toolbar">
+    <input id="token" type="password" placeholder="GitHub Token (contents:rw)" />
+    <button id="setToken">Set Token</button><span class="spacer"></span>
+    <button id="edit" class="ghost">Edit</button>
+    <button id="save" class="primary">Save</button>
+  </div>
+  <div class="notice" id="status">Ready.</div>
+</header>
+<main class="wrap">
+  <div id="content"></div>
+  <div id="editorWrap" style="display:none;margin-top:16px;">
+    <textarea id="editor" placeholder="# Open Water Course — SOP&#10;&#10;(Start writing in Markdown)"></textarea>
+  </div>
+  <footer>Edits commit to <code>/content/open-water-course.md</code>.</footer>
+</main>
+<script src="sop.js"></script>
+<script>wireEditor("content/open-water-course.md","Open Water Course — SOP");</script>
+</body></html>
