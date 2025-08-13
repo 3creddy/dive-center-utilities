@@ -1,7 +1,66 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>Dive Center SOPs v2 (HTML)</title><link rel="stylesheet" href="sop.css"></head>
-<body><header class="wrap"><h1>Dive Center SOPs v2 (HTML)</h1><p class="subtle">Test side-by-side without touching the MD setup.</p></header>
-<main class="wrap"><div class="card-grid">
-<a class="card" href="open-water-course.html"><h2>Open Water Course — SOP (HTML)</h2><p>Uses content_v2/open-water-course.html</p></a>
-<a class="card" href="divemaster-training-course.html"><h2>Divemaster Training Course — SOP (HTML)</h2><p>Converted from your MD</p></a>
-</div></main></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DIVEIndia — SOPs</title>
+  <style>
+    :root{
+      --bg:#0b2a3b;
+      --sea:#103a4e;
+      --card:#123f56;
+      --text:#e7f6ff;
+      --ring:rgba(25,167,206,.35);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;
+      color:var(--text); background: radial-gradient(1000px 700px at 70% -10%, rgba(255,255,255,.08), transparent 60%), linear-gradient(180deg, var(--sea), var(--bg));
+      min-height:100dvh; padding: 24px 16px;
+    }
+    header{ text-align:center; margin-bottom: 18px; }
+    h1{ margin:0 0 6px }
+    .sub{ opacity:.85; }
+    .grid{
+      width:min(1000px, 92vw); margin: 16px auto;
+      display:grid; gap:14px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+    a.card{
+      display:flex; align-items:center; justify-content:center; text-align:center;
+      min-height:96px; padding:18px; text-decoration:none; color:var(--text); font-weight:700;
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+      border:1px solid rgba(255,255,255,.14); border-radius:14px;
+      box-shadow: 0 6px 24px rgba(0,0,0,.28), inset 0 1px 0 rgba(255,255,255,.06);
+      transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+    }
+    a.card:hover{
+      transform: translateY(-4px);
+      border-color: var(--ring);
+      box-shadow: 0 10px 28px rgba(0,0,0,.34), 0 0 0 1px var(--ring) inset;
+    }
+    footer{ text-align:center; margin: 18px 0 6px; opacity:.8 }
+    .back{
+      display:inline-block; margin-top:8px; color:var(--text); text-decoration:none; font-weight:600;
+      border:1px solid rgba(255,255,255,.18); border-radius:999px; padding:8px 12px;
+      background: rgba(255,255,255,.06);
+    }
+    .back:hover{ box-shadow: 0 0 0 1px var(--ring) inset; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Dive Center SOPs</h1>
+    <div class="sub">Choose a course SOP</div>
+  </header>
+
+  <main class="grid">
+    <a class="card" href="./content/open-water-course.html">Open Water Diver SOP</a>
+    <a class="card" href="./content/advanced-adventurer-course-sop.html">Advanced Adventurer SOP</a>
+    <a class="card" href="./content/divemaster-training-course.html">Divemaster Training SOP</a>
+  </main>
+
+  <footer>
+    <a class="back" href="./index.html">← Back to Home</a>
+  </footer>
+</body>
+</html>
